@@ -2,15 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Letter : MonoBehaviour {
+public class Letter : MonoBehaviour
+{
+    public string letter;
 
-	// Use this for initialization
-	void Start () {
+    private SpriteRenderer _spriteRenderer;
+
+    private void Awake()
+    {
+        _spriteRenderer = this.GetComponent<SpriteRenderer>();
+    }
+
+    // Use this for initialization
+    private void Start ()
+    {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	private void Update ()
+    {
 		
 	}
 }

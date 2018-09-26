@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 212883443679161480}
   - component: {fileID: 114997271822955376}
   m_Layer: 0
-  m_Name: Letter
+  m_Name: Letter_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6346441c11ca648d18f4fdb0d10629f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  letter: 
 --- !u!212 &212883443679161480
 SpriteRenderer:
   m_ObjectHideFlags: 1
