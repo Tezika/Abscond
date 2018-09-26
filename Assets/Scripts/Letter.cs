@@ -11,6 +11,12 @@ namespace Abs.Letter
 
         private SpriteRenderer _spriteRenderer;
 
+        public void OnClicked()
+        {
+            //Destroy this letter, add one into the inventory.
+
+        }
+
         private void Awake()
         {
             _spriteRenderer = this.GetComponent<SpriteRenderer>();

@@ -4,7 +4,7 @@ namespace Abs.Inventory
 {
     public class Collectible : MonoBehaviour
     {
-
+        public string letter;
         // Use this for initialization
         void Start()
         {
