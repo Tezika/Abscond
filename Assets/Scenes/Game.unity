@@ -266,6 +266,11 @@ Prefab:
       propertyPath: m_Name
       value: Letter_A
       objectReference: {fileID: 0}
+    - target: {fileID: 114997271822955376, guid: 6936b517398624d5aa13d2bad3732367,
+        type: 2}
+      propertyPath: letter
+      value: A
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6936b517398624d5aa13d2bad3732367, type: 2}
   m_IsPrefabParent: 0
@@ -576,10 +581,10 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -267.1}
-  m_SizeDelta: {x: 0, y: -534.3}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.1396163}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -1.699997}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1901890288
 MonoBehaviour:
   m_ObjectHideFlags: 0
