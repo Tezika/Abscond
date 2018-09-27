@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01fc6eda848584027b98deed1553a46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibleAsset: {fileID: 0}
+  collectibleAsset: {fileID: 11400000, guid: d54363cf216fc4b4498cc57265e53828, type: 2}
 --- !u!1 &2035226224
 GameObject:
   m_ObjectHideFlags: 0
