@@ -36,7 +36,7 @@ namespace Abs.Inventory
         // Use this for initialization
         private void Start()
         {
-            this.AddCollectible("A");
+            //this.AddCollectible("A");
         }
 
         // Update is called once per frame
