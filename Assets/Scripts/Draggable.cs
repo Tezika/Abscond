@@ -23,6 +23,6 @@ public class Draggable : MonoBehaviour {
         Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(x, y, z));
         gameObject.transform.position = point;
 
-        Debug.Log("x: " + point.x + "   y: " + point.y + "   z: " + point.z);
+        //Debug.Log("x: " + point.x + "   y: " + point.y + "   z: " + point.z);
     }
 }

@@ -26,6 +26,7 @@ public class TriggerObject : MonoBehaviour {
     {
         if (collision.gameObject != correctObject)
             return;
+        Debug.Log("Trigger");
         foreach (Callback x in callback)
             x.Invoke();
     }

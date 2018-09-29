@@ -14,7 +14,7 @@ public class Callback : MonoBehaviour {
 		
 	}
 
-    public void Invoke()
+    public virtual void Invoke()
     {
 
     }
