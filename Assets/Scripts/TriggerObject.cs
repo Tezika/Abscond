@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Abs.Utils;
 using Abs.Callbacks;
 using UnityEngine;
+using Abs.Triggerable;
 
 namespace Abs.Item
 {
@@ -15,6 +16,7 @@ namespace Abs.Item
              */
 
         public GameObject correctObject;
+
         private Callback[] callbacks;
 
         // Use this for initialization
@@ -33,7 +35,11 @@ namespace Abs.Item
         {
             if (other.gameObject != correctObject)
                 return;
-            Debug.Log("Trigger");
+            var triggeree = other.gameObject.GetComponent<Triggeree>();
+            if (triggeree != null )
+            {
+                triggeree.Triggered();
+            }
             foreach (Callback x in callbacks)
                 x.Invoke();
         }
