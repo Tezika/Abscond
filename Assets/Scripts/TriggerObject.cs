@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Abs.Utils;
+using Abs.Callbacks;
 using UnityEngine;
 
 namespace Abs.Item
@@ -30,7 +31,6 @@ namespace Abs.Item
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debugger.Log("Trigger the functions");
             if (other.gameObject != correctObject)
                 return;
             Debug.Log("Trigger");
