@@ -27,7 +27,8 @@ namespace Abs.Callbacks
         public override void Invoke()
         {
             base.Invoke();
-            Instantiate(this.prefab, this.instantiateTrans.transform.position, Quaternion.identity);
+            Instantiate(this.prefab, this.instantiateTrans.transform.position,
+                        Quaternion.identity, this.gameObject.transform.parent);
         }
     }
 }
