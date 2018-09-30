@@ -16,12 +16,12 @@ public class Draggable : MonoBehaviour {
 
     void OnMouseDrag()
     {
-        float x = Input.mousePosition.x;
-        float y = Input.mousePosition.y;
-        float z = gameObject.transform.position.z;
+        //float x = Input.mousePosition.x;
+        //float y = Input.mousePosition.y;
+        //float z = 0;
 
-        Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(x, y, z));
-        gameObject.transform.position = point;
+        Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        gameObject.transform.position = new Vector3(point.x, point.y, 0);
 
         //Debug.Log("x: " + point.x + "   y: " + point.y + "   z: " + point.z);
     }
