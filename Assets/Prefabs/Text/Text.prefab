@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 224119005158895524}
   - component: {fileID: 61580236955161720}
-  - component: {fileID: 50179307956658330}
   - component: {fileID: 114750435002661158}
   - component: {fileID: 114695381018425104}
   - component: {fileID: 33922814288116282}
@@ -66,8 +65,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1480200495
+  m_SortingLayer: 2
   m_SortingOrder: 0
 --- !u!33 &33922814288116282
 MeshFilter:
@@ -76,26 +75,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1383458806529060}
   m_Mesh: {fileID: 0}
---- !u!50 &50179307956658330
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1383458806529060}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &61580236955161720
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -174,7 +153,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 258
+  m_textAlignment: 514
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
