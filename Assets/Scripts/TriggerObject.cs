@@ -17,12 +17,14 @@ namespace Abs.Item
 
         public GameObject correctObject;
 
-        private Callback[] callbacks;
+        public bool destroyAfterTriggered;
+
+        private Callback[] _callbacks;
 
         // Use this for initialization
         void Start()
         {
-            callbacks = GetComponents<Callback>();
+            _callbacks = GetComponents<Callback>();
         }
 
         // Update is called once per frame
@@ -40,8 +42,13 @@ namespace Abs.Item
             {
                 triggeree.Triggered();
             }
-            foreach (Callback x in callbacks)
+            foreach (Callback x in _callbacks)
                 x.Invoke();
+
+            if (this.destroyAfterTriggered)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 
