@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114379531269806034}
   - component: {fileID: 50338082269648400}
   m_Layer: 0
-  m_Name: Item_door
+  m_Name: Item_sinkdrawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a61201f25abe4791a7c5f3ea86417f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1851787052925956, guid: e85044e34121d44a3a4d7b7171c30fd7, type: 2}
+  prefab: {fileID: 1296146053044736, guid: 2b6c58d2d2dec4cbf8fe6b6fbd9eb212, type: 2}
   instantiateTrans: {fileID: 4344723196222950}
 --- !u!114 &114695820274444064
 MonoBehaviour:
@@ -156,7 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6175c7cac5748c4a80083f2e55a0a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctObject: {fileID: 0}
+  correctObject: {fileID: 1884432615974098, guid: 57608ee61f9ce42fc87c0b259f0ddc79,
+    type: 2}
 --- !u!114 &114805175918858902
 MonoBehaviour:
   m_ObjectHideFlags: 1
