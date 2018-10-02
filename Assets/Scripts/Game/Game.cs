@@ -4,7 +4,6 @@ public class Game : MonoBehaviour
 {
     private void Awake()
     {
-        
     }
 
     // Use this for initialization
