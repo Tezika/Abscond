@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Abs.Utils;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Abs.Callbacks
@@ -20,7 +21,8 @@ namespace Abs.Callbacks
             base.Invoke();
             for (int i = 0; i < this.clips.Count; i++)
             {
-                _source.PlayOneShot(clips[i]);
+                Debugger.Log("Play the sound:" + this.clips[i].name);
+                _source.PlayOneShot(this.clips[i]);
             }
         }
     }
