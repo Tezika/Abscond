@@ -3,23 +3,17 @@ using UnityEngine;
 
 namespace Abs.Triggerable
 {
+    [RequireComponent(typeof(BoxCollider2D))]
     public class Draggable : MonoBehaviour
     {
-        public bool beingDragged { get; private set; };
-
-        private BoxCollider2D _boxCollider2D;
+        public bool beingDragged { get; private set; }
 
         private void Awake()
         {
             this.beingDragged = false;
-            _boxCollider2D = this.GetComponent<BoxCollider2D>();
         }
 
         // Use this for initialization
-        void Start()
-        {
-
-        }
 
         void Update()
         {
