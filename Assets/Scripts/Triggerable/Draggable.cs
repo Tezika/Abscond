@@ -1,5 +1,4 @@
-﻿using Abs.Utils;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Abs.Triggerable
 {
