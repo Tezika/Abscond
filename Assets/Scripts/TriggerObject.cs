@@ -21,6 +21,13 @@ namespace Abs.Item
 
         private Callback[] _callbacks;
 
+        private Draggable _cachedDraggable;
+
+        private void Awake()
+        {
+            _cachedGameobject = null;
+        }
+
         // Use this for initialization
         void Start()
         {
@@ -33,10 +40,20 @@ namespace Abs.Item
 
         }
 
+        private void FixedUpdate()
+        {
+            if (_cachedDraggable != null && !_cachedDraggable.beingDragged)
+            {
+                
+            }
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject != correctObject)
                 return;
+            _cachedDraggable = other.gameObject.GetComponent<Draggable>();
+
             var triggeree = other.gameObject.GetComponent<Triggeree>();
             if (triggeree != null )
             {
@@ -49,6 +66,13 @@ namespace Abs.Item
             {
                 Destroy(this.gameObject);
             }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.gameObject != correctObject)
+                return;
+            _cachedDraggable = null;
         }
     }
 
