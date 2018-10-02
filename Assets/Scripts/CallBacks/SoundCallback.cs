@@ -22,6 +22,7 @@ namespace Abs.Callbacks
             for (int i = 0; i < this.clips.Count; i++)
             {
                 Debugger.Log("Play the sound:" + this.clips[i].name);
+
                 _source.PlayOneShot(this.clips[i]);
             }
         }
