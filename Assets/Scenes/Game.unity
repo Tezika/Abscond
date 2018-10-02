@@ -232,7 +232,7 @@ Prefab:
     - target: {fileID: 114283522935942820, guid: 6936b517398624d5aa13d2bad3732367,
         type: 2}
       propertyPath: m_text
-      value: unshut
+      value: Unshut
       objectReference: {fileID: 0}
     - target: {fileID: 114283522935942820, guid: 6936b517398624d5aa13d2bad3732367,
         type: 2}
@@ -699,7 +699,7 @@ Prefab:
     - target: {fileID: 114283522935942820, guid: 6936b517398624d5aa13d2bad3732367,
         type: 2}
       propertyPath: m_text
-      value: restore
+      value: Restore
       objectReference: {fileID: 0}
     - target: {fileID: 114283522935942820, guid: 6936b517398624d5aa13d2bad3732367,
         type: 2}
@@ -2059,7 +2059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1531823679
 RectTransform:
   m_ObjectHideFlags: 0
