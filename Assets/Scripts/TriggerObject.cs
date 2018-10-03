@@ -1,34 +1,28 @@
 ﻿using Abs.Callbacks;
 using UnityEngine;
 using Abs.Triggerable;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Abs.Item
 {
     public class TriggerObject : MonoBehaviour
     {
-
         /*
          This script can be added onto any object on which you can drag another object.
          Make sure it has a Collider2D component with "IsTrigger" set.
              */
-        public GameObject correctObject;
-
-        public bool destroyAfterTriggered;
-
-        private Callback[] _callbacks;
+        private List<Callback> _callbacks;
 
         private Draggable _cachedDraggable;
 
         private void Awake()
         {
             _cachedDraggable = null;
+            _callbacks = GetComponents<Callback>().ToList();
         }
 
-        // Use this for initialization
-        void Start()
-        {
-            _callbacks = GetComponents<Callback>();
-        }
+        // Use this for initializatio
 
         // Update is called once per frame
         void Update()
@@ -46,32 +40,44 @@ namespace Abs.Item
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject != correctObject)
+            var callback = _callbacks.Find(c => c.triggerObject == other.gameObject);
+
+            if (callback == null)
+            {
                 return;
+            }
 
             _cachedDraggable = other.gameObject.GetComponent<Draggable>();
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            if (other.gameObject != correctObject)
+            var callback = _callbacks.Find(c => c.triggerObject == other.gameObject);
+
+            if (callback == null)
+            {
                 return;
+            }
 
             _cachedDraggable = null;
         }
 
         private void Trigger(GameObject triggerObject)
         {
-            var triggeree = triggerObject.GetComponent<Triggeree>();
-            if (triggeree != null)
+            var destroyedAfterTriggered = false;
+            foreach (var c in _callbacks)
             {
-                triggeree.Triggered();
+                if (c.triggerObject == triggerObject)
+                {
+                    c.Invoke();
+                    if (!destroyedAfterTriggered && c.destroyedAfterCallback)
+                    {
+                        destroyedAfterTriggered = true;
+                    }
+                }
             }
 
-            foreach (Callback x in _callbacks)
-                x.Invoke();
-
-            if (this.destroyAfterTriggered)
+            if (destroyedAfterTriggered)
             {
                 Destroy(this.gameObject);
             }
