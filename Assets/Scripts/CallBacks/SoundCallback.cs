@@ -18,7 +18,6 @@ namespace Abs.Callbacks
             {
                 AudioManager.instance.PlayAudio(clip);
             }
-             //_source.PlayOneShot(this.clips[i]);
         }
     }
 }
