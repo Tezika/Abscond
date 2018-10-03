@@ -22,8 +22,6 @@ GameObject:
   - component: {fileID: 61395797959619092}
   - component: {fileID: 212682638540151812}
   - component: {fileID: 114235602282043486}
-  - component: {fileID: 114231953078934048}
-  - component: {fileID: 114568770113893660}
   - component: {fileID: 114300644948084016}
   - component: {fileID: 50937636716204708}
   m_Layer: 0
@@ -149,19 +147,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
---- !u!114 &114231953078934048
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1243504019509480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a61201f25abe4791a7c5f3ea86417f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 1884432615974098, guid: 57608ee61f9ce42fc87c0b259f0ddc79, type: 2}
-  instantiateTrans: {fileID: 4468094856111966}
 --- !u!114 &114235602282043486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctObject: {fileID: 0}
+  destroyAfterTriggered: 0
 --- !u!114 &114300644948084016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,19 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   replaceSprite: {fileID: 21300000, guid: 382c611060924432a8f9894d1ffedec3, type: 3}
---- !u!114 &114568770113893660
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1243504019509480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a61201f25abe4791a7c5f3ea86417f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 1116598469987750, guid: 2b9656d455c05435093ef0341d20d15a, type: 2}
-  instantiateTrans: {fileID: 4491821206291016}
 --- !u!212 &212682638540151812
 SpriteRenderer:
   m_ObjectHideFlags: 1

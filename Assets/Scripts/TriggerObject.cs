@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Abs.Utils;
-using Abs.Callbacks;
+﻿using Abs.Callbacks;
 using UnityEngine;
 using Abs.Triggerable;
 
@@ -14,7 +11,6 @@ namespace Abs.Item
          This script can be added onto any object on which you can drag another object.
          Make sure it has a Collider2D component with "IsTrigger" set.
              */
-
         public GameObject correctObject;
 
         public bool destroyAfterTriggered;
@@ -66,7 +62,6 @@ namespace Abs.Item
 
         private void Trigger(GameObject triggerObject)
         {
-
             var triggeree = triggerObject.GetComponent<Triggeree>();
             if (triggeree != null)
             {
