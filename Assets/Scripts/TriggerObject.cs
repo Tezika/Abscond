@@ -8,7 +8,6 @@ namespace Abs.Item
 {
     public class TriggerObject : MonoBehaviour
     {
-
         /*
          This script can be added onto any object on which you can drag another object.
          Make sure it has a Collider2D component with "IsTrigger" set.
@@ -65,12 +64,6 @@ namespace Abs.Item
 
         private void Trigger(GameObject triggerObject)
         {
-            var triggeree = triggerObject.GetComponent<Triggeree>();
-            if (triggeree != null)
-            {
-                triggeree.Triggered();
-            }
-
             var destroyedAfterTriggered = false;
             foreach (var c in _callbacks)
             {
