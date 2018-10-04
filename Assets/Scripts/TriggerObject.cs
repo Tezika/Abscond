@@ -3,6 +3,7 @@ using UnityEngine;
 using Abs.Triggerable;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections;
 
 namespace Abs.Item
 {
@@ -15,6 +16,8 @@ namespace Abs.Item
         private List<Callback> _callbacks;
 
         private Draggable _cachedDraggable;
+
+        private bool coroutineRunning = false;
 
         private void Awake()
         {
@@ -70,10 +73,24 @@ namespace Abs.Item
                 if (c.triggerObject == triggerObject)
                 {
                     c.Invoke();
+                    Debug.Log("Show definition of object here.");
+                    var def = triggerObject.GetComponent<Def_Popup>();
+                    if (def != null)
+                    {
+                        if (coroutineRunning)
+                            StopAllCoroutines();
+                        def.transform.position = transform.position;
+                        def.transform.position.Set(def.transform.position.x, def.transform.position.y + 10, def.transform.position.z);
+                        StartCoroutine(showDef(def));
+                    }
                     if (!destroyedAfterTriggered && c.destroyedAfterCallback)
                     {
                         destroyedAfterTriggered = true;
                     }
+                }
+                else
+                {
+                    
                 }
             }
 
@@ -81,6 +98,15 @@ namespace Abs.Item
             {
                 Destroy(this.gameObject);
             }
+        }
+
+        IEnumerator showDef(Def_Popup def)
+        {
+            coroutineRunning = true;
+            def.showPopup();            
+            yield return new WaitForSeconds(5); ;
+            def.closePopup();
+            coroutineRunning = false;
         }
     }
 
